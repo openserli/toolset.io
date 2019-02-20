@@ -1,0 +1,22 @@
+tag:^(?!AudioTrack) tag:^(?!dalvikvm) tag:^(?!mdpservice) tag:^(?!inputm)
+
+
+ de.greenrobot.event.EventBusException: Subscriber class org.doubango.ngn.media.NgnProxyAudioProducer and its super classes have no public methods with the @Subscribe annotation
+        at de.greenrobot.event.SubscriberMethodFinder.findSubscriberMethods(SubscriberMethodFinder.java:82)
+        at de.greenrobot.event.EventBus.register(EventBus.java:135)
+        at org.doubango.ngn.media.NgnProxyAudioProducer.<init>(NgnProxyAudioProducer.java:99)
+        at org.doubango.ngn.media.NgnProxyPluginMgr$MyProxyPluginMgrCallback.OnPluginCreated(NgnProxyPluginMgr.java:85)
+        at org.doubango.tinyWRAP.tinyWRAPJNI.SwigDirector_ProxyPluginMgrCallback_OnPluginCreated(tinyWRAPJNI.java:723)
+        at org.doubango.tinyWRAP.tinyWRAPJNI.CallSession_call__SWIG_0(Native Method)
+        at org.doubango.tinyWRAP.CallSession.call(CallSession.java:91)
+        at org.doubango.ngn.sip.NgnAVSession.makeCall(NgnAVSession.java:583)
+        at com.unionbroad.app.util.CallUtil.call(CallUtil.java:121)
+        at com.unionbroad.app.util.CallUtil.applyTalkBackGroups(CallUtil.java:45)
+        at com.unionbroad.app.core.PttManager.connectChannel(PttManager.java:784)
+        at com.unionbroad.app.fragment.TalkFragment.initTalk(TalkFragment.java:367)
+        at com.unionbroad.app.fragment.TalkFragment.onCreateView(TalkFragment.java:112)
+        at android.support.v4.app.Fragment.performCreateView(Fragment.java:2074)
+        at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:1104)
+        at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:1286)
+        at android.support.v4.app.BackStackRecord.run(BackStackRecord.java:758)
+        at android.support.v4.app.FragmentManagerImpl.execSingleAction(FragmentManager.java:1632)
